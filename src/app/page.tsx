@@ -1,8 +1,29 @@
+'use client';
+
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { FaUserTie } from 'react-icons/fa';
+import { FaUpload } from 'react-icons/fa';
+import { useState, useRef } from 'react';
 
 export default function Home() {
+  const [selectedImage, setSelectedImage] = useState<File | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      setSelectedImage(file);
+      console.log('Selected file:', file.name);
+      // Here we'll later send to backend API
+    }
+  };
+
+  const triggerFileUpload = () => {
+    fileInputRef.current?.click();
+  };
+
+  // Main page section
   return (
     <div className="bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 min-h-screen flex flex-col items-center justify-center p-8 relative">
       <div className="absolute inset-0 bg-white/95"></div>
@@ -14,6 +35,23 @@ export default function Home() {
         <p className="text-2xl text-gray-700 max-w-2xl">
           Use AI to generate images and diet information for a menu!
         </p>
+        
+        <button 
+          onClick={triggerFileUpload}
+          className="mt-8 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-8 py-4 rounded-full text-xl font-semibold flex items-center gap-3 hover:scale-105 transition-transform shadow-lg"
+        >
+          <FaUpload className="h-6 w-6" />
+          Upload Images
+          <FaUpload className="h-6 w-6" />
+        </button>
+        
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept="image/*"
+          onChange={handleFileUpload}
+          className="hidden"
+        />
       </main>
       
       <footer className="mt-auto pb-8 flex flex-col items-center space-y-4">
@@ -46,7 +84,9 @@ export default function Home() {
             <FaUserTie className="h-5 w-5" />
           </a>
         </div>
-        <p className="text-gray-600">Developed by Andrew Robinson</p>
+        <p className="mt-2 text-gray-600">
+          Developed by <span className="font-semibold">Andrew Robinson</span>
+        </p>
       </footer>
       </div>
     </div>
