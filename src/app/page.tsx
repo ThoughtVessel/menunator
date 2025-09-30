@@ -81,14 +81,14 @@ export default function Home() {
 
   if (hasError) {
     return (
-      <div className="bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 min-h-screen flex flex-col items-center justify-center p-8 relative">
+      <div className="bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 min-h-screen flex flex-col items-center justify-center p-4 sm:p-8 relative">
         <div className="absolute inset-0 bg-white/95"></div>
-        <div className="relative z-10 text-center max-w-2xl">
-          <div className="text-red-500 text-8xl mb-6">⚠️</div>
-          <h1 className="text-6xl font-bold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 bg-clip-text text-transparent mb-6">
+        <div className="relative z-10 text-center max-w-2xl px-4">
+          <div className="text-red-500 text-6xl sm:text-8xl mb-4 sm:mb-6">⚠️</div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 bg-clip-text text-transparent mb-4 sm:mb-6">
             Analysis Failed
           </h1>
-          <p className="text-2xl text-gray-700 mb-8">
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 mb-6 sm:mb-8">
             We couldn&apos;t analyze your menu. Please try again with a clearer image.
           </p>
 
@@ -105,11 +105,11 @@ export default function Home() {
           <div className="space-y-4">
             <button
               onClick={resetApp}
-              className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-8 py-4 rounded-full text-xl font-semibold hover:scale-105 transition-transform shadow-lg"
+              className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-semibold hover:scale-105 transition-transform shadow-lg"
             >
               Try Again
             </button>
-            <p className="text-gray-600">
+            <p className="text-gray-600 text-sm sm:text-base px-2">
               Try uploading a different image or make sure your menu is clearly visible
             </p>
           </div>
@@ -120,11 +120,11 @@ export default function Home() {
 
   if (showResults) {
     return (
-      <div className="bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 min-h-screen p-8 relative">
+      <div className="bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 min-h-screen p-4 sm:p-8 relative">
         <div className="absolute inset-0 bg-white/95"></div>
         <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="text-center mb-8">
-            <h1 className="text-6xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent mb-4">
+          <div className="text-center mb-6 sm:mb-8 px-4">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent mb-3 sm:mb-4">
               Your Menuated Menu
             </h1>
             <button
@@ -180,14 +180,14 @@ export default function Home() {
 
   if (isProcessing) {
     return (
-      <div className="bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 min-h-screen flex flex-col items-center justify-center p-8 relative">
+      <div className="bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 min-h-screen flex flex-col items-center justify-center p-4 sm:p-8 relative">
         <div className="absolute inset-0 bg-white/95"></div>
-        <div className="relative z-10 text-center">
-          <FaSpinner className="animate-spin text-6xl text-purple-600 mb-6 mx-auto" />
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent mb-4">
+        <div className="relative z-10 text-center px-4">
+          <FaSpinner className="animate-spin text-5xl sm:text-6xl text-purple-600 mb-4 sm:mb-6 mx-auto" />
+          <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent mb-3 sm:mb-4">
             Processing Your Menu...
           </h1>
-          <p className="text-xl text-gray-700 mb-8">
+          <p className="text-lg sm:text-xl text-gray-700 mb-6 sm:mb-8 max-w-2xl mx-auto">
             AI is analyzing your menu and generating beautiful images for each item
           </p>
           {imagePreview && (
@@ -206,19 +206,19 @@ export default function Home() {
 
   if (selectedImage) {
     return (
-      <div className="bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 min-h-screen flex flex-col items-center justify-center p-8 relative">
+      <div className="bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 min-h-screen flex flex-col items-center justify-center p-4 sm:p-8 relative">
         <div className="absolute inset-0 bg-white/95"></div>
-        <div className="relative z-10 w-full max-w-4xl">
-          <div className="text-center mb-8">
-            <h1 className="text-6xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent mb-4">
+        <div className="relative z-10 w-full max-w-4xl px-4">
+          <div className="text-center mb-6 sm:mb-8">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent mb-3 sm:mb-4">
               Menu Preview
             </h1>
-            <p className="text-xl text-gray-700">
+            <p className="text-lg sm:text-xl text-gray-700">
               Ready to generate your AI-enhanced menu?
             </p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+          <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 mb-4 sm:mb-6">
             {imagePreview && (
               <img
                 src={imagePreview}
@@ -231,14 +231,14 @@ export default function Home() {
           <div className="text-center space-y-4">
             <button
               onClick={processMenuImage}
-              className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-8 py-4 rounded-full text-xl font-semibold hover:scale-105 transition-transform shadow-lg"
+              className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-semibold hover:scale-105 transition-transform shadow-lg"
             >
               Generate AI Menu
             </button>
             <br />
             <button
               onClick={resetApp}
-              className="text-gray-600 hover:text-gray-800 underline"
+              className="text-gray-600 hover:text-gray-800 underline text-sm sm:text-base"
             >
               Choose Different Image
             </button>
@@ -249,20 +249,20 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 min-h-screen flex flex-col items-center justify-center p-8 relative">
+    <div className="bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 min-h-screen flex flex-col items-center justify-center p-4 sm:p-8 relative">
       <div className="absolute inset-0 bg-white/95"></div>
       <div className="relative z-10 w-full flex flex-col items-center justify-center min-h-screen">
-        <main className="flex flex-col items-center text-center space-y-6 max-w-4xl">
-          <h1 className="text-8xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent">
+        <main className="flex flex-col items-center text-center space-y-4 sm:space-y-6 max-w-4xl px-4">
+          <h1 className="text-4xl sm:text-6xl lg:text-8xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent">
             Menuator
           </h1>
-          <p className="text-2xl text-gray-700 max-w-2xl">
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 max-w-2xl px-2">
             Upload a menu photo and AI will generate beautiful images and diet information for each item!
           </p>
 
           <button
             onClick={triggerFileUpload}
-            className="mt-8 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-8 py-4 rounded-full text-xl font-semibold flex items-center gap-3 hover:scale-105 transition-transform shadow-lg"
+            className="mt-6 sm:mt-8 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg sm:text-xl font-semibold flex items-center gap-2 sm:gap-3 hover:scale-105 transition-transform shadow-lg"
           >
             <FaUpload className="h-6 w-6" />
             Upload Menu Photo
@@ -278,8 +278,8 @@ export default function Home() {
           />
         </main>
 
-        <footer className="mt-auto pb-8 flex flex-col items-center space-y-4">
-          <div className="flex gap-4 items-center">
+        <footer className="mt-auto pb-6 sm:pb-8 flex flex-col items-center space-y-3 sm:space-y-4 px-4">
+          <div className="flex gap-3 sm:gap-4 items-center">
             <a
               href="https://www.linkedin.com/in/andrew-robinson314/"
               className="rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 p-3 text-white transition-transform hover:scale-110"
@@ -308,7 +308,7 @@ export default function Home() {
               <FaUserTie className="h-5 w-5" />
             </a>
           </div>
-          <p className="mt-2 text-gray-600">
+          <p className="mt-2 text-gray-600 text-sm sm:text-base text-center">
             Developed by <span className="font-semibold">Andrew Robinson</span>
           </p>
         </footer>
