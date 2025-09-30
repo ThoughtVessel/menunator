@@ -155,7 +155,7 @@ export default function Home() {
                 )}
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-xl font-semibold">{item.name}</h3>
+                    <h3 className="text-xl font-semibold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent">{item.name}</h3>
                     <span className="text-lg font-bold text-purple-600">{item.price}</span>
                   </div>
                   <p className="text-gray-600 mb-4">{item.description}</p>
