@@ -89,7 +89,7 @@ export default function Home() {
             Analysis Failed
           </h1>
           <p className="text-2xl text-gray-700 mb-8">
-            We couldn't analyze your menu. Please try again with a clearer image.
+            We couldn&apos;t analyze your menu. Please try again with a clearer image.
           </p>
 
           {imagePreview && (
