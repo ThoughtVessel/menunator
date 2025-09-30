@@ -4,6 +4,12 @@
 
 Menunator transforms restaurant menus into beautiful, visually appealing displays with AI-generated food photography and detailed nutritional information.
 
+## 🌐 Live Demo
+
+### **[🚀 Try Menunator Now →](https://menunator-bbd7.vercel.app/)**
+
+*Upload a menu photo and watch AI create beautiful food images!*
+
 ## ✨ Features
 
 - **📸 Menu Photo Upload**: Upload any restaurant menu image
